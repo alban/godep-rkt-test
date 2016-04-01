@@ -51,16 +51,14 @@ echo
 echo "### getting deps"
 go get github.com/appc/cni || true
 go get github.com/appc/spec || true
+go get github.com/appc/docker2aci || true
 go get go4.org/errorutil || true
 echo "### godep restore"
 godep restore -v
 echo "### updating repositories"
 (cd $GOPATH/src/github.com/appc/cni && git pull origin master)
-(cd $GOPATH/src/github.com/appc/spec && git pull origin master)
-#echo "### godep update appc/cni"
-#godep update -v github.com/appc/cni/...
-#echo "### godep update appc/spec"
-#godep update -v github.com/appc/spec/...
+(cd $GOPATH/src/github.com/appc/docker2aci && git pull origin master)
+#(cd $GOPATH/src/github.com/appc/spec && git pull origin master)
 echo "### godep-save"
 ./scripts/godep-save
 echo "### git status"
