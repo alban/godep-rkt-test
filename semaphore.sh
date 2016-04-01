@@ -66,7 +66,7 @@ echo "### godep-save"
 echo "### git status"
 git status
 echo "### git diff"
-git diff --no-color
+git diff --no-color | cat
 echo "###"
 
 # updates
