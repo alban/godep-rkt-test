@@ -19,6 +19,9 @@ mkdir -p $GOPATH
 mkdir -p $GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
+git config --global user.email "you@example.com"
+git config --global user.name "Semaphore Script godep-rkt-test"
+
 # select rkt sources
 cd
 if [ "$SEMAPHORE_CURRENT_THREAD" = "1" ] ; then
