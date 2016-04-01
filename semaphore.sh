@@ -61,9 +61,8 @@ godep restore -v
 echo "### updating repositories"
 (cd $GOPATH/src/github.com/appc/cni && git pull origin master)
 (cd $GOPATH/src/github.com/appc/docker2aci && git pull origin master)
-(cd $GOPATH/src/github.com/docker/distribution && git pull origin master)
 (cd $GOPATH/src/github.com/godbus/dbus && git pull origin master)
-#(cd $GOPATH/src/github.com/appc/spec && git pull origin master)
+(cd $GOPATH/src/github.com/appc/spec && git pull origin master)
 echo "### godep-save"
 ./scripts/godep-save
 echo "### git status"
