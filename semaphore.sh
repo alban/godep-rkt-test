@@ -60,7 +60,9 @@ echo "### godep restore"
 godep restore -v
 echo "### updating repositories"
 (cd $GOPATH/src/github.com/appc/docker2aci && git pull origin master)
+godep update github.com/appc/docker2aci/...
 (cd $GOPATH/src/github.com/appc/spec && git pull origin master)
+godep update github.com/appc/spec/...
 echo "### godep-save"
 ./scripts/godep-save
 echo "### git status"
