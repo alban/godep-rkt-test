@@ -65,8 +65,12 @@ echo "### godep-save"
 ./scripts/godep-save
 echo "### git status"
 git status
+echo "### git diffstat"
+git diff --no-color --stat| cat
 echo "### git diff"
-git diff --no-color | cat
+git diff --no-color| cat
+echo "### debugging..."
+git grep camlistore.*errorutil
 echo "###"
 
 # updates
