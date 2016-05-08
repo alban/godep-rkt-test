@@ -71,8 +71,8 @@ echo "### git diffstat"
 git diff --no-color --stat| cat
 echo "### git diff"
 git diff --no-color| cat
-echo "### debugging..."
-git grep camlistore.*errorutil
+#echo "### debugging..."
+#git grep camlistore.*errorutil | true
 echo "###"
 
 # updates
