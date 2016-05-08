@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 if [ "$1" = "setup" ] ; then
   sudo groupadd rkt
@@ -52,7 +53,6 @@ echo
 
 # update godeps
 echo "### getting deps"
-go get github.com/appc/cni || true
 go get github.com/appc/spec || true
 go get github.com/appc/docker2aci || true
 go get go4.org/errorutil || true
